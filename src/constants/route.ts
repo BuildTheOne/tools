@@ -5,6 +5,18 @@ export const route = {
   },
   "repository.home": {
     url: "/",
-    label: ""
-  }
+    label: "",
+  },
+  randomizer: {
+    url: "/randomizer",
+    label: "Randomizer",
+  },
+  "random-generator": {
+    url: "/random-generator",
+    label: "Random Generator",
+  },
+  "random-password-generator": {
+    url: "/random-generator/password",
+    label: "Password",
+  },
 };

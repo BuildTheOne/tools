@@ -1,3 +1,5 @@
+import { route as Route } from "@/constants/route";
+
 type MenuProps = {
   id: string;
   label: string;
@@ -6,9 +8,32 @@ type MenuProps = {
   isActive?: boolean;
 };
 
-const mainMenu: MenuProps[] = [];
+const randomizerMenu: MenuProps[] = [
+  {
+    id: "randomizer",
+    url: Route["randomizer"].url,
+    label: Route["randomizer"].label,
+    isActive: true,
+  },
+];
 
-const menu = [...mainMenu].filter((m) => {
+const randomGeneratorMenu: MenuProps[] = [
+  {
+    id: "random-generator",
+    url: Route["random-generator"].url,
+    label: Route["random-generator"].label,
+    children: [
+      {
+        id: "random-password-generator",
+        url: Route["random-password-generator"].url,
+        label: Route["random-password-generator"].label,
+        isActive: true,
+      },
+    ],
+  },
+];
+
+const menu = [...randomizerMenu, ...randomGeneratorMenu].filter((m) => {
   if (m.children) {
     if (m.children.every((sm) => !sm.isActive)) return false;
     return m.children.filter((sm) => sm.isActive);

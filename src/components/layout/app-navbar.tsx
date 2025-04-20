@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { route as Route } from "@/constants/route";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import {route as Route} from '@/constants/route';
 
 type NavbarProps = {
   breadcrumbPath?: string[];
@@ -31,14 +31,6 @@ const AppNavbar = ({ breadcrumbPath = [] }: NavbarProps) => {
         </div>
       </div>
       <div className="flex justify-end items-center gap-2">
-        <Button
-          size="icon"
-          variant="outline"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="cursor-pointer"
-        >
-          <Icon icon={theme === "dark" ? "Moon" : "Sun"} size="sm" />
-        </Button>
         <Link href={Route["repository.home"].url} target="_blank">
           <Button
             size="icon"
@@ -64,6 +56,14 @@ const AppNavbar = ({ breadcrumbPath = [] }: NavbarProps) => {
             </svg>
           </Button>
         </Link>
+        <Button
+          size="icon"
+          variant="outline"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="cursor-pointer"
+        >
+          <Icon icon={theme === "dark" ? "Moon" : "Sun"} size="sm" />
+        </Button>
       </div>
     </nav>
   );
