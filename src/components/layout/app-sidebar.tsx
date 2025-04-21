@@ -34,7 +34,7 @@ const AppSidebar = () => {
             <SidebarGroupContent>
               <SidebarMenu>
                 {menu.children && menu.children.length > 0 ? (
-                  <Collapsible className="group/collapsible">
+                  <Collapsible className="group/collapsible" defaultOpen>
                     <SidebarMenuItem>
                       <CollapsibleTrigger asChild>
                         <SidebarMenuButton className="cursor-pointer">

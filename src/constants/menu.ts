@@ -33,12 +33,30 @@ const randomGeneratorMenu: MenuProps[] = [
   },
 ];
 
-const menu = [...randomizerMenu, ...randomGeneratorMenu].filter((m) => {
-  if (m.children) {
-    if (m.children.every((sm) => !sm.isActive)) return false;
-    return m.children.filter((sm) => sm.isActive);
-  }
-  return m.isActive;
-});
+const tiktokMenu: MenuProps[] = [
+  {
+    id: "tiktok",
+    url: Route["tiktok"].url,
+    label: Route["tiktok"].label,
+    children: [
+      {
+        id: "timestamp",
+        url: Route["tiktok.timestamp"].url,
+        label: Route["tiktok.timestamp"].label,
+        isActive: true,
+      },
+    ],
+  },
+];
+
+const menu = [...randomizerMenu, ...randomGeneratorMenu, ...tiktokMenu].filter(
+  (m) => {
+    if (m.children) {
+      if (m.children.every((sm) => !sm.isActive)) return false;
+      return m.children.filter((sm) => sm.isActive);
+    }
+    return m.isActive;
+  },
+);
 
 export { menu };

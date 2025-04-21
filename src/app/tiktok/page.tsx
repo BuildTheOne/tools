@@ -8,7 +8,7 @@ export default function Page() {
   const breadcrumb = pathName.split("/").filter((p) => p !== "");
 
   return (
-    <AppPage title="Randomizer" breadcrumbPath={breadcrumb}>
+    <AppPage title="Tiktok Tools" breadcrumbPath={breadcrumb}>
       <div></div>
     </AppPage>
   );

@@ -28,7 +28,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { RandomPasswordGeneratorFormData } from "@/types/random-generator/random-pasword.type";
+import { RandomPasswordGeneratorFormData } from "@/types/random-generator/random-password.type";
 import { useState } from "react";
 import { UseFormReturn } from "react-hook-form";
 
@@ -266,7 +266,7 @@ const RandomPasswordGeneratorForm = ({
                             {
                               shouldDirty: true,
                               shouldValidate: true,
-                            },
+                            }
                           );
                         }}
                         disabled={!form.watch("isIncludeSpecialCharacter")}
@@ -321,7 +321,7 @@ const RandomPasswordGeneratorForm = ({
                             <SelectItem key={item} value={item.toString()}>
                               {item}
                             </SelectItem>
-                          ),
+                          )
                         )}
                       </SelectContent>
                     </Select>

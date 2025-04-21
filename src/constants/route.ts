@@ -19,4 +19,12 @@ export const route = {
     url: "/random-generator/password",
     label: "Password",
   },
+  tiktok: {
+    url: "/tiktok",
+    label: "Tiktok",
+  },
+  "tiktok.timestamp": {
+    url: "/tiktok/timestamp",
+    label: "Timestamp",
+  },
 };

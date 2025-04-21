@@ -5,14 +5,14 @@ import { RandomGeneratorService } from "@/services/random-generator.service";
 import {
   RandomPasswordGeneratorFormData,
   randomPasswordGeneratorSchema,
-} from "@/types/random-generator/random-pasword.type";
+} from "@/types/random-generator/random-password.type";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import RandomPasswordGeneratorForm from "./form";
 
-export default function RandomPasswordGeneratorPage() {
+export default function Page() {
   const pathName = usePathname();
   const breadcrumb = pathName.split("/").filter((p) => p !== "");
 

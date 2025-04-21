@@ -5,7 +5,7 @@ import {
   numberCharacter,
   uppercaseCharacter,
 } from "@/constants/characters";
-import { RandomPasswordGeneratorFormData } from "@/types/random-generator/random-pasword.type";
+import { RandomPasswordGeneratorFormData } from "@/types/random-generator/random-password.type";
 
 const randomPasswordGeneratorService = ({
   passwordLength,
