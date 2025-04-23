@@ -10,6 +10,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Loading } from "@/components/ui/loading";
 import { TiktokTimestampFormData } from "@/types/tiktok/tiktok-timestamp.type";
 import { UseFormReturn } from "react-hook-form";
 
@@ -42,7 +43,13 @@ const TiktokTimestampForm = ({ form, onSubmit }: TiktokTimestampFormProps) => {
             </FormItem>
           )}
         />
-        <Button type="submit">Get Timestamp</Button>
+        <Button type="submit">
+          {form.formState.isSubmitting ? (
+            <Loading type="spinner" />
+          ) : (
+            "Get Timestamp"
+          )}
+        </Button>
       </form>
     </Form>
   );
