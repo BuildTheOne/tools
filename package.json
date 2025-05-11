@@ -6,11 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "lint": "next lint",
     "format": "prettier --write src/",
     "typecheck": "tsc --noEmit",
-    "deploy": "pnpm run build && pnpm export && gh-pages -d out"
+    "deploy": "pnpm run build && gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
